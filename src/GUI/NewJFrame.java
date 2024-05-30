@@ -4,6 +4,8 @@
  */
 package GUI;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import tasbeehcounter.TasbeehCounter;
 
 /**
@@ -22,6 +24,8 @@ public class NewJFrame extends javax.swing.JFrame {
         this.tc = new TasbeehCounter();
         jLabel1.setText("0");
         setLocationRelativeTo(null);
+        jLabel2.setIcon(new ImageIcon(new ImageIcon(getClass().getResource("/GUI/instagram_2111463.png")).getImage().getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_SMOOTH)));
+        this.setIconImage(new ImageIcon(getClass().getResource("/GUI/instagram_2111463.png")).getImage());
     }
 
     /**
@@ -38,6 +42,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,13 +86,18 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton2)
                         .addGap(39, 39, 39)
-                        .addComponent(jButton3)))
+                        .addComponent(jButton3))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(271, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(92, 92, 92)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -169,6 +179,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
